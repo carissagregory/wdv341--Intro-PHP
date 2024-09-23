@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4-1 HTML Form Processing</title>
+
+<style>
+
+  body {
+    background-color: #bbe4ff;
+  }
+
+  form	{
+    width:750px;
+		margin:auto;
+		padding-left: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    
+	}
+	
+	form legend	{
+		font-size:36px;
+		text-align:center; 
+	}
+
+  form p {
+    margin-bottom: 15px;
+    margin-left: 200px;
+  }
+
+  [type="text"], [type="email"], select, textarea {
+    width: 325px;
+    background-color: #f2e9ff;
+    border: 1px solid #e9daff;
+    border-radius: 10px;
+  }
+
+  [type="submit"], [type="reset"] {
+    background-color: #212121;
+    color: white;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 70px;
+  }
+
+</style>
+
+</head>
+
+<body>
+<h1>4-1 HTML Form Processing</h1>
+<form id="form" name="form" method="post" action="formHandler.php">
+  <!--
+    -email address
+    -radio buttons
+      -High school, Freshman, Sophomore
+    -Drop Down w/ acronym values
+      -Default, Computer Information Systems, Graphic Design, Web Development
+      -"", CIS, GRD, WDV
+    -Checkboxes w/ values
+      -Please contact me with program information
+      -I would like to contact an program advisor
+      -programInfo, programAdvisor
+    -textarea
+      -comment
+    -Style form to look professional
+  -->
+
+  <legend>Contact Us</legend>
+  
+  <p>
+  	<label for="firstName">First Name:</label> 
+    <br>
+    <input type="text" name="firstName" id="firstName">
+  </p>
+
+  <p>
+  	<label for="lastName">Last Name:</label> 
+    <br>
+    <input type="text" name="lastName" id="lastName">
+  </p>
+  
+  <p>
+  	<label for="schoolName">School Name:</label> 
+    <br>
+    <input type="text" name="schoolName" id="schoolName">
+  </p>
+
+  <p>
+  	<label for="emailAddress">Email Address:</label> 
+    <br>
+    <input type="email" name="emailAddress" id="emailAddress">
+  </p>
+
+  <p>
+    Select your grade level:
+    <br>
+    <input type="radio" id="highSchool" name="gradeLevel" value="highSchool">
+    <label for="highSchool">High School</label>
+    <br>
+    <input type="radio" id="freshman" name="gradeLevel" value="freshman">
+    <label for="freshman">Freshman</label>
+    <br>
+    <input type="radio" id="sophomore" name="gradeLevel" value="sophomore">
+    <label for="sophomore">Sophomore</label>
+  </p>
+
+  <p>
+    Select Your Major:
+    <br>
+    <select name="majorOptions" id="majorOptions">
+      <option value="">Major Options</option>
+      <option value="CIS">Computer Information Systems</option>
+      <option value="GRD">Graphic Design</option>
+      <option value="WDV">Web Development</option>
+    </select>
+  </p>
+
+  <p>
+    Select your reason(s) for contacting us:
+    <br>
+    <input type="checkbox" id="programInfo" name="programInfo" value="programInfo">
+    <label for="programInfo">Please contact me with program information.</label>
+    <br>
+    <input type="checkbox" id="programAdvisor" name="programAdvisor" value="programAdvisor">
+    <label for="programAdvisor">I would like to contact an program advisor.</label>
+  </p>
+
+  <p>
+    <label for="comments">Comments:</label>
+    <br>
+    <textarea id="comments" name="comments" rows="5" cols="50">
+
+    </textarea>
+  </p>
+
+  <p>
+    <input type="submit" name="submitButton" id="submitButton" value="Submit">
+    <input type="reset" name="resetButton" id="resetButton" value="Reset">
+  </p>  
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
