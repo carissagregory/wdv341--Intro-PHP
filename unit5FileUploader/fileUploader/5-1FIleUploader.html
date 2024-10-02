@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-1: Image File Uploader</title>
+</head>
+<body>
+    <h1>WDV341 Intro PHP</h1>
+    <h2>5-1: Image File Uploader</h2>
+
+    <form method="post" action="imageFileUploader.php" enctype="multipart/form-data">
+        <p>
+            <label for="inImageName">Image File Name: </label>
+            <input type="text" name="inImageName" id="file" placeholder="Image file name on server">
+        </p>
+        <p>
+            <label for="inImage">Select a Image: </label>
+            <input type="file" name="inImage" id="inImage" accept=".jpg,.gif,.png,.svg">
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Upload Image">
+            <input type="reset">
+        </p>
+    </form>
+</body>
+</html>
