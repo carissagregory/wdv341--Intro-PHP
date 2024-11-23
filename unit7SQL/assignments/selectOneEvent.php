@@ -31,7 +31,7 @@
     }
     catch(PDOException $e) {
         echo "Database Failed: " . $e->getMessage();
-    }
+    }   
 
     /* 
     $eventRecord = $stmt->fetch();          //return the first row of the result - Associative
