@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if($_SESSION['validSession'] !== "yes"){
+    //you are not a valid user and CANNOT access this porcess - return to login
+    header("Location: ../../unit10ProtectedPages/assignment/login.php");    //server side redirect
+}
 //To connect to the database the following steps:
     //1. Connect to the database
     //2. Create your SQL query
