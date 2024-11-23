@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            background-color: #bbe4ff;
+        }
+
+        form	{
+            width:750px;
+            margin:auto;
+            padding-left: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            
+        }
+            
+        form legend	{
+            font-size:36px;
+            text-align:center; 
+        }
+
+        form p {
+            margin-bottom: 15px;
+            margin-left: 200px;
+        }
+
+        [type="text"], [type="email"], select, textarea {
+            width: 325px;
+            background-color: #f2e9ff;
+            border: 1px solid #e9daff;
+            border-radius: 10px;
+        }
+
+        textarea {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        [type="submit"], [type="reset"] {
+            background-color: #212121;
+            color: white;
+            margin-bottom: 15px;
+            margin-right: 5px;
+            border-radius: 15px;
+            padding: 10px;
+            margin-left: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        -contact name(person contacting you)
+        -contact email(email of person contacting you)
+        -drop down of contact reasons
+        -add required to fields
+    -->
+    <form id="contactForm" name="contactForm" method="post" action="formHandler.php">
+        <legend>Contact Carissa</legend>
+        <p>
+            <label for="firstName">First Name:</label> 
+            <br>
+            <input type="text" name="firstName" id="firstName" required>
+        </p>
+        <p>
+            <label for="lastName">Last Name:</label> 
+            <br>
+            <input type="text" name="lastName" id="lastName" required>
+        </p>
+        <p>
+            <label for="email">Email:</label> 
+            <br>
+            <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            <label for="contactReason">Reason for Contacting:</label>
+            <br>
+            <select id="contactReason" name="contactReason" required>
+                <option value="">Select a Contact Reason</option>
+                <option value="message">Leaving a Message</option>
+                <option value="inquiry">Inquiry</option>
+                <option value="feedback">Feedback</option>
+                <option value="request">Request</option>
+            </select>
+        </p>
+        <p>
+            <label for="message">Message:</label>
+            <br>
+            <textarea id="message" name="message" rows="5" cols="50" required> 
+        
+            </textarea>
+          </p>
+        <p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+            <input type="reset" name="reset" id="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
